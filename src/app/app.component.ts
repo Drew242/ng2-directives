@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'dir works!';
+  private switch: boolean = true;
+
+  private items: number[] = [1, 2, 3, 4, 5];
+
+  private value:number = 100;
+
+  onSwitch() {
+    this.switch = !this.switch;
+  }
 }

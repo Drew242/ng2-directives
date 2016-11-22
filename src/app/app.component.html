@@ -1,3 +1,29 @@
-<h1>
-  {{title}}
-</h1>
+<h1>Attribute Directives</h1>
+<h2>ngClass / ngStyle</h2>
+<div [ngClass]="{border: false, background: true}"></div>
+<div [ngStyle]="{'background-color': 'red'}"></div>
+<hr>
+<h2>Custom Attribute Directive</h2>
+<div>
+  <h3 dirHighlight>Highlighted</h3>
+  <h3>Not Highlighted</h3>
+</div>
+<hr>
+<h1>Structural Directive</h1>
+<h2>*ngIf</h2>
+<div *ngIf="switch">Conditional Text</div>
+<button (click)="onSwitch()">Switch</button>
+<hr>
+<h2>*ngFor</h2>
+<ul>
+  <li *ngFor="let item of items; let i = index">{{ item }} - (Index: {{ i }})</li>
+</ul>
+<hr>
+<h2>ngSwitch</h2>
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="10">10</p>
+  <p *ngSwitchCase="100">100</p>
+  <p *ngSwitchDefault>Default</p>
+</div>
+
+<!-- You can also access through [class.background]="true" same for background -->
